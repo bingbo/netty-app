@@ -12,4 +12,11 @@
     <artifactId>netty-app-client</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>com.ibingbo</groupId>
+            <artifactId>netty-app-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

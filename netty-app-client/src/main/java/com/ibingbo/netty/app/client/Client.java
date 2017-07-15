@@ -1,5 +1,9 @@
 package com.ibingbo.netty.app.client;
 
+import com.ibingbo.netty.app.common.Decoder;
+import com.ibingbo.netty.app.common.Encoder;
+import com.ibingbo.netty.app.common.Request;
+import com.ibingbo.netty.app.common.Response;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -32,7 +36,10 @@ public class Client {
                     .remoteAddress(new InetSocketAddress(host, port))
                     .handler(new ChannelInitializer<SocketChannel>() {
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            socketChannel.pipeline().addLast(new ClientHandler());
+                            socketChannel.pipeline()
+                                    .addLast(new Encoder(Request.class))
+                                    .addLast(new Decoder(Response.class))
+                                    .addLast(new ClientHandler1());
                         }
                     });
             ChannelFuture f = b.connect().sync();

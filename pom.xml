@@ -11,6 +11,8 @@
     <modules>
         <module>netty-app-server</module>
         <module>netty-app-client</module>
+        <module>netty-app-common</module>
+        <module>netty-app-protobuf</module>
     </modules>
 
     <dependencies>
@@ -20,6 +22,27 @@
             <artifactId>netty-all</artifactId>
             <version>4.0.9.Final</version>
         </dependency>
+
+        <!-- Protostuff -->
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <!-- Objenesis -->
+        <dependency>
+            <groupId>org.objenesis</groupId>
+            <artifactId>objenesis</artifactId>
+            <version>2.5.1</version>
+        </dependency>
+
+
     </dependencies>
 
 </project>
