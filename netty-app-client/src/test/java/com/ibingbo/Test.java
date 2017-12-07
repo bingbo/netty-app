@@ -31,6 +31,7 @@ public class Test {
         System.setProperty("socksProxyHost", "10.99.192.200");
         System.setProperty("socksProxyPort", "8084");
 
+
         try {
             String[] urls = new String[] {
                     "http://ibingbo.com:8063"
