@@ -13,6 +13,8 @@
         <module>netty-app-client</module>
         <module>netty-app-common</module>
         <module>netty-app-protobuf</module>
+        <module>netty-app-msgpack</module>
+        <module>netty-app-websocket</module>
     </modules>
 
     <dependencies>
@@ -42,7 +44,12 @@
             <version>2.5.1</version>
         </dependency>
 
-
+        <!--msgpack序列化与反序列化工具包-->
+        <dependency>
+            <groupId>org.msgpack</groupId>
+            <artifactId>msgpack</artifactId>
+            <version>0.6.12</version>
+        </dependency>
     </dependencies>
 
 </project>
